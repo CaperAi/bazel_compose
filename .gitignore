@@ -1,0 +1,11 @@
+/.classpath
+/.factorypath
+/.idea/
+/.ijwb/
+/.project
+/.settings
+/.vscode/
+/bazel-*
+
+# Ignore generated docker-compose file
+docker-compose-generated.yml

@@ -1,0 +1,11 @@
+py_binary(
+    name = "bazel_compose",
+    srcs = [
+        "bazel.py",
+        "compose.py",
+        "main.py",
+        "watcher.py",
+    ],
+    main = "main.py",
+    deps = ["//third_party/py/yaml"],
+)

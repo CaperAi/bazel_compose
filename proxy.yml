@@ -1,0 +1,10 @@
+http:
+  routers:
+    example:
+      service: svc-example
+      rule: HostRegexp(`example.{domain:.+}`)
+  services:
+    svc-example:
+      loadBalancer:
+        servers:
+        - url: http://example:8080

@@ -1,0 +1,15 @@
+load("@pip//:requirements.bzl", "requirement")
+load("@io_bazel_rules_docker//python3:image.bzl", "py3_image")
+
+py3_image(
+    name = "example",
+    srcs = ["main.py"],
+    main = "main.py",
+    deps = [
+        #        "//third_party/py/click",
+        #        "//third_party/py/flask",
+        #        "//third_party/py/itsdangerous",
+        #        "//third_party/py/jinja2",
+        #        "//third_party/py/werkzeug",
+    ],
+)

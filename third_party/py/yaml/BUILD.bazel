@@ -1,0 +1,7 @@
+load("@pip//:requirements.bzl", "requirement")
+
+alias(
+    name = "yaml",
+    actual = requirement("PyYAML"),
+    visibility = ["//visibility:public"],
+)

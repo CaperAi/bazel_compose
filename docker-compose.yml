@@ -1,0 +1,13 @@
+version: '2.2'
+services:
+  proxy:
+    image: traefik:v2.3
+    ports:
+      - "80:80"
+      - "443:443"
+    command:
+      - "--entryPoints.web.address=:80"
+      - "--providers.file.directory=/configs/dynamic"
+      - "--api.insecure=true"
+    volumes:
+      - ./proxy.yml:/configs/dynamic/proxy.yml:ro
